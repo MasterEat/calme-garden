@@ -110,9 +110,11 @@
 <!-- TopAppBar -->
 <header class="fixed top-0 w-full z-50 bg-[#FAFAFA]/90 backdrop-blur-md border-b border-[#2D4F1E]/5 shadow-[0_4px_20px_-10px_rgba(45,79,30,0.08)]">
 <nav class="flex justify-between items-center h-20 px-8 md:px-16 max-w-full mx-auto">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-[#2D4F1E]" data-icon="park">park</span>
+<div class="flex items-center gap-3" data-header-brand>
+<a class="flex items-center gap-3" href="index.html">
+<img alt="Calme Garden" class="h-10 w-auto" src="assets/images/logo.webp"/>
 <span class="text-2xl font-semibold tracking-tighter text-[#2D4F1E] font-headline-md">Calme Garden</span>
+</a>
 </div>
 <div class="hidden md:flex items-center gap-8 font-label-md">
 <a class="text-[#2D4F1E]/70 hover:text-[#2D4F1E] transition-colors" href="index.html">Home</a>
@@ -121,7 +123,7 @@
 <a class="text-[#2D4F1E] font-bold border-b-2 border-[#2D4F1E] pb-1" href="contact.html">Contact</a>
 </div>
 <div class="flex items-center gap-4">
-<button class="text-[#2D4F1E] font-label-md hover:bg-[#F5F5DC]/50 px-4 py-2 rounded-full transition-all">EL | EN</button>
+<div class="cg-lang-switcher"></div>
 <button class="md:hidden material-symbols-outlined text-[#2D4F1E]">menu</button>
 </div>
 </nav>
@@ -130,7 +132,7 @@
 <!-- Hero Section -->
 <section class="px-margin mb-xl">
 <div class="max-w-4xl">
-<h1 class="font-headline-xl text-headline-xl text-primary mb-6">Contact / Επικοινωνία</h1>
+<h1 class="font-headline-xl text-headline-xl text-primary mb-6" data-el="Επικοινωνία" data-en="Contact">Επικοινωνία</h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
                     Reach out to us to schedule a visit, book an event, or learn more about our sustainable farming and cultural initiatives. 
                     <br/><span class="italic">Επικοινωνήστε μαζί μας για να προγραμματίσετε την επίσκεψή σας ή να μάθετε περισσότερα για τις δράσεις μας.</span>

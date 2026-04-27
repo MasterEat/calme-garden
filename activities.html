@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en"><head>
+<html lang="el"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -115,9 +115,11 @@
 <!-- TopAppBar -->
 <header class="fixed top-0 w-full z-50 bg-[#FAFAFA]/90 backdrop-blur-md border-b border-[#2D4F1E]/5 shadow-[0_4px_20px_-10px_rgba(45,79,30,0.08)]">
 <div class="flex justify-between items-center h-20 px-8 md:px-16 max-w-full mx-auto">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-[#2D4F1E] text-2xl" data-icon="park">park</span>
+<div class="flex items-center gap-3" data-header-brand>
+<a class="flex items-center gap-3" href="index.html">
+<img alt="Calme Garden" class="h-10 w-auto" src="assets/images/logo.webp"/>
 <span class="text-2xl font-semibold tracking-tighter text-[#2D4F1E] font-headline-md">Calme Garden</span>
+</a>
 </div>
 <nav class="hidden md:flex items-center gap-8">
 <a class="font-headline-md text-sm text-[#2D4F1E]/70 hover:text-[#2D4F1E] transition-colors" href="index.html">Home</a>
@@ -126,7 +128,7 @@
 <a class="font-headline-md text-sm text-[#2D4F1E]/70 hover:text-[#2D4F1E] transition-colors" href="events.html">Events &amp; Retreats</a>
 </nav>
 <div class="flex items-center gap-4">
-<button class="font-headline-md text-sm font-medium text-[#2D4F1E]">EL | EN</button>
+<div class="cg-lang-switcher"></div>
 <button class="bg-primary-container text-on-primary px-6 py-2 rounded-full font-headline-md text-sm hover:opacity-90 transition-all">Book Visit</button>
 </div>
 </div>
@@ -135,7 +137,7 @@
 <!-- Hero Section -->
 <section class="px-8 md:px-24 mb-xl">
 <div class="max-w-4xl">
-<h1 class="font-headline-xl text-headline-xl text-primary mb-sm">Explore Our Activities</h1>
+<h1 class="font-headline-xl text-headline-xl text-primary mb-sm" data-el="Ανακαλύψτε τις Δραστηριότητές μας" data-en="Explore Our Activities">Ανακαλύψτε τις Δραστηριότητές μας</h1>
 <h2 class="font-headline-lg text-headline-lg text-on-surface-variant mb-md italic font-light">Ανακαλύψτε τις Δραστηριότητές μας</h2>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
                     Immerse yourself in a world where culture meets nature. From meditative yoga sessions to hands-on creative workshops, Calme Garden offers pathways to reconnection and growth.

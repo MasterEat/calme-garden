@@ -129,9 +129,11 @@
 <!-- TopAppBar -->
 <header class="fixed top-0 w-full z-50 bg-[#FAFAFA]/90 dark:bg-stone-950/90 backdrop-blur-md border-b border-[#2D4F1E]/5 shadow-[0_4px_20px_-10px_rgba(45,79,30,0.08)]">
 <div class="flex justify-between items-center h-20 px-8 md:px-16 max-w-full mx-auto">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-[#2D4F1E] text-3xl" data-icon="park">park</span>
-<span class="text-2xl font-semibold tracking-tighter text-[#2D4F1E] dark:text-[#F5F5DC] font-['Manrope']">Calme Garden</span>
+<div class="flex items-center gap-3" data-header-brand>
+<a class="flex items-center gap-3" href="index.html">
+<img alt="Calme Garden" class="h-10 w-auto" src="assets/images/logo.webp"/>
+<span class="text-2xl font-semibold tracking-tighter text-[#2D4F1E] font-headline-md">Calme Garden</span>
+</a>
 </div>
 <nav class="hidden md:flex items-center gap-12 font-['Manrope'] font-medium tracking-tight">
 <a class="text-[#2D4F1E] font-bold border-b-2 border-[#2D4F1E] pb-1" href="index.html">Home</a>
@@ -140,7 +142,7 @@
 <a class="text-[#2D4F1E]/70 hover:text-[#2D4F1E] transition-colors" href="contact.html">Contact</a>
 </nav>
 <div class="flex items-center gap-4">
-<button class="px-4 py-2 text-sm font-bold text-[#2D4F1E] hover:bg-[#F5F5DC]/50 transition-all duration-300 rounded-full">EL | EN</button>
+<div class="cg-lang-switcher"></div>
 <button class="md:hidden material-symbols-outlined text-[#2D4F1E]" data-icon="menu">menu</button>
 </div>
 </div>
@@ -154,12 +156,9 @@
 </div>
 <div class="relative h-full flex flex-col justify-end items-start px-8 md:px-24 pb-24 max-w-7xl mx-auto">
 <div class="max-w-3xl space-y-8">
-<h1 class="text-white font-headline-xl text-headline-xl leading-tight">
-                        Ένας ζωντανός χώρος φύσης, πολιτισμού και μάθησης<br/>
-<span class="font-body-lg italic opacity-90 text-surface">A living space of nature, culture and learning</span>
-</h1>
+<h1 class="text-white font-headline-xl text-headline-xl leading-tight" data-el="Ένας ζωντανός χώρος φύσης, πολιτισμού και μάθησης" data-en="A living space of nature, culture and learning">Ένας ζωντανός χώρος φύσης, πολιτισμού και μάθησης</h1>
 <div class="flex flex-wrap gap-4">
-<a class="px-8 py-4 bg-primary text-white font-label-md text-label-md rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300" href="#activities">Δείτε τις δραστηριότητες / Explore Activities</a>
+<a class="px-8 py-4 bg-primary text-white font-label-md text-label-md rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300" data-el="Δείτε τις δραστηριότητες" data-en="Explore Activities" href="#activities">Δείτε τις δραστηριότητες</a>
 <a class="px-8 py-4 bg-white/20 backdrop-blur-md border border-white/30 text-white font-label-md text-label-md rounded-full hover:bg-white/30 transition-all duration-300" href="#contact">Επικοινωνήστε μαζί μας / Contact Us</a>
 </div>
 </div>

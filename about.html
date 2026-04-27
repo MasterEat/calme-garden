@@ -119,18 +119,18 @@
 <!-- TopAppBar -->
 <nav class="fixed top-0 w-full z-50 bg-[#FAFAFA]/90 backdrop-blur-md border-b border-[#2D4F1E]/5 shadow-[0_4px_20px_-10px_rgba(45,79,30,0.08)]">
 <div class="flex justify-between items-center h-20 px-8 md:px-16 max-w-full mx-auto">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-[#2D4F1E]" data-icon="park">park</span>
+<div class="flex items-center gap-3" data-header-brand>
+<a class="flex items-center gap-3" href="index.html">
+<img alt="Calme Garden" class="h-10 w-auto" src="assets/images/logo.webp"/>
 <span class="text-2xl font-semibold tracking-tighter text-[#2D4F1E] font-headline-md">Calme Garden</span>
+</a>
 </div>
 <div class="hidden md:flex items-center gap-8">
 <a class="text-[#2D4F1E]/70 hover:text-[#2D4F1E] transition-colors font-headline-md text-label-md" href="index.html">Home</a>
 <a class="text-[#2D4F1E] font-bold border-b-2 border-[#2D4F1E] pb-1 font-headline-md text-label-md" href="about.html">About Us</a>
 <a class="text-[#2D4F1E]/70 hover:text-[#2D4F1E] transition-colors font-headline-md text-label-md" href="activities.html">Activities</a>
 <a class="text-[#2D4F1E]/70 hover:text-[#2D4F1E] transition-colors font-headline-md text-label-md" href="products.html">Products</a>
-<button class="ml-4 px-4 py-1.5 rounded-full border border-primary/20 text-[#2D4F1E] font-label-md text-xs hover:bg-[#F5F5DC]/50 transition-all">
-                    EL | EN
-                </button>
+<div class="cg-lang-switcher"></div>
 </div>
 <button class="md:hidden text-[#2D4F1E]">
 <span class="material-symbols-outlined" data-icon="menu">menu</span>
@@ -143,9 +143,7 @@
 <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 <div class="z-10">
 <span class="inline-block px-4 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-xs mb-6">ΣΧΕΤΙΚΑ ΜΕ ΕΜΑΣ • ABOUT US</span>
-<h1 class="font-headline-xl text-headline-xl text-primary mb-8">
-                        Cultivating Community through <span class="italic font-body-lg text-secondary">Nature &amp; Culture</span>
-</h1>
+<h1 class="font-headline-xl text-headline-xl text-primary mb-8" data-i18n-html="true" data-el="Καλλιεργώντας κοινότητα μέσα από τη <span class='italic font-body-lg text-secondary'>Φύση &amp; τον Πολιτισμό</span>" data-en="Cultivating Community through <span class='italic font-body-lg text-secondary'>Nature &amp; Culture</span>">Cultivating Community through <span class="italic font-body-lg text-secondary">Nature &amp; Culture</span></h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-10">
                         Calme Garden is an eco-cultural educational community center in Keratea, dedicated to non-formal education, environmental respect, and the preservation of local traditions.
                     </p>
