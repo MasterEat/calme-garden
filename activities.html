@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Newsreader:ital,wght@0,400;0,500;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#303221",
+                        "tertiary-fixed-dim": "#c8c8b0",
+                        "on-tertiary-container": "#b6b7a0",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-surface-variant": "#43493e",
+                        "surface": "#f9f9f9",
+                        "on-tertiary-fixed-variant": "#474836",
+                        "secondary": "#496800",
+                        "error": "#ba1a1a",
+                        "surface-container": "#eeeeee",
+                        "inverse-surface": "#2f3131",
+                        "secondary-fixed": "#c8f17a",
+                        "outline": "#73796d",
+                        "on-background": "#1a1c1c",
+                        "primary-fixed-dim": "#a9d293",
+                        "primary": "#173809",
+                        "on-primary-fixed-variant": "#2d4f1e",
+                        "on-secondary-fixed": "#131f00",
+                        "on-secondary-fixed-variant": "#364e00",
+                        "error-container": "#ffdad6",
+                        "inverse-on-surface": "#f0f1f1",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#dadada",
+                        "primary-fixed": "#c5efad",
+                        "surface-container-low": "#f3f3f3",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#98c083",
+                        "background": "#f9f9f9",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed-dim": "#add461",
+                        "tertiary-container": "#474836",
+                        "secondary-container": "#c8f17a",
+                        "surface-variant": "#e2e2e2",
+                        "primary-container": "#2d4f1e",
+                        "surface-container-high": "#e8e8e8",
+                        "inverse-primary": "#a9d293",
+                        "on-surface": "#1a1c1c",
+                        "surface-tint": "#446733",
+                        "surface-bright": "#f9f9f9",
+                        "tertiary-fixed": "#e4e4cc",
+                        "outline-variant": "#c3c8bb",
+                        "on-secondary-container": "#4e6e00",
+                        "on-tertiary-fixed": "#1b1d0e",
+                        "on-primary-fixed": "#062100",
+                        "on-error": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "xs": "0.5rem",
+                        "xl": "4rem",
+                        "lg": "2.5rem",
+                        "sm": "1rem",
+                        "gutter": "24px",
+                        "margin": "max(5vw, 24px)",
+                        "md": "1.5rem"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Manrope"],
+                        "label-md": ["Manrope"],
+                        "body-lg": ["Newsreader"],
+                        "headline-lg": ["Manrope"],
+                        "headline-xl": ["Manrope"],
+                        "body-md": ["Newsreader"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #FAFAFA;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#FAFAFA]/90 backdrop-blur-md border-b border-[#2D4F1E]/5 shadow-[0_4px_20px_-10px_rgba(45,79,30,0.08)]">
+<div class="flex justify-between items-center h-20 px-8 md:px-16 max-w-full mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#2D4F1E] text-2xl" data-icon="park">park</span>
+<span class="text-2xl font-semibold tracking-tighter text-[#2D4F1E] font-headline-md">Calme Garden</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-headline-md text-sm text-[#2D4F1E]/70 hover:text-[#2D4F1E] transition-colors" href="#">Home</a>
+<a class="font-headline-md text-sm text-[#2D4F1E]/70 hover:text-[#2D4F1E] transition-colors" href="#">About Us</a>
+<a class="font-headline-md text-sm text-[#2D4F1E] font-bold border-b-2 border-[#2D4F1E] pb-1" href="#">Activities</a>
+<a class="font-headline-md text-sm text-[#2D4F1E]/70 hover:text-[#2D4F1E] transition-colors" href="#">Events &amp; Retreats</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="font-headline-md text-sm font-medium text-[#2D4F1E]">EL | EN</button>
+<button class="bg-primary-container text-on-primary px-6 py-2 rounded-full font-headline-md text-sm hover:opacity-90 transition-all">Book Visit</button>
+</div>
+</div>
+</header>
+<main class="pt-32">
+<!-- Hero Section -->
+<section class="px-8 md:px-24 mb-xl">
+<div class="max-w-4xl">
+<h1 class="font-headline-xl text-headline-xl text-primary mb-sm">Explore Our Activities</h1>
+<h2 class="font-headline-lg text-headline-lg text-on-surface-variant mb-md italic font-light">Ανακαλύψτε τις Δραστηριότητές μας</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    Immerse yourself in a world where culture meets nature. From meditative yoga sessions to hands-on creative workshops, Calme Garden offers pathways to reconnection and growth.
+                </p>
+</div>
+</section>
+<!-- Activities Grid (Bento Style) -->
+<section class="px-8 md:px-24">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- 1. Children & Family -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-[32px] bg-[#F5F5DC] shadow-[0_4px_20px_-10px_rgba(45,79,30,0.12)] border border-primary/5">
+<div class="aspect-[16/9] md:aspect-auto md:h-[450px] relative">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Children laughing and exploring a lush organic garden with sunflowers and butterflies in soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzg_FBpk75Ysa1iA_3DKXzg1GUTgZZBtlz5Bes6fFwn4PnTJX7jRZeQjzEOvt3_ZX5uABfdL33uhcstqDoEyC8kjYjEFnRxVfBKfCcAH38nsBtOtB0bRtCLvTxTm8Am7fSVaWfCjCzW26hESHl_a7QCE7ZlNT5FSxO9FsDz8qhqLEVuLG2GVBOFoycxoq-QsuIVwq7U-9JqEiF6bf1StQkDrjAJQlaKj9dWmhDmr547Tb_sMJ56Q6g-3VqZVGmINBAwGo9heZWaNqO"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#2D4F1E]/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 md:p-12 text-white">
+<span class="inline-block px-4 py-1 rounded-full bg-white/20 backdrop-blur-md text-xs font-headline-md uppercase tracking-widest mb-4">Family &amp; Growth</span>
+<h3 class="font-headline-lg text-headline-lg mb-2">Children &amp; Family Workshops</h3>
+<h4 class="font-body-lg text-body-md opacity-90 italic">Εργαστήρια για Παιδιά &amp; Οικογένειες</h4>
+<p class="mt-4 font-body-md text-white/80 max-w-md hidden md:block">Interactive learning experiences designed to foster curiosity and a deep bond between generations and the earth.</p>
+</div>
+</div>
+</div>
+<!-- 2. Yoga & Wellness -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-[32px] bg-[#F5F5DC] shadow-[0_4px_20px_-10px_rgba(45,79,30,0.12)] border border-primary/5">
+<div class="h-full flex flex-col">
+<div class="aspect-square relative overflow-hidden">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Peaceful person practicing yoga in a sun-drenched garden clearing surrounded by ancient olive trees" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5-1rqMTFviwLPgZn2t0SDoFwMSb9z1Flh29XzmLL27ZE7mLOJhzPKAYPxB0FXQ5zF58aZ_8rKVEtMJbHk0wmHGR6QA7lQTwzoZYAXLvGwW3aNGxeSDiZtnOqF3p2NGoHW7VSYfMerRfjr9d1eq17dSeppaQQrJS947ePVtKMyOF_TxYWLCRbU_zvALtS-yL-qxUknEqlZba61MORhwA9zU1e_gDUUFyfYd-NANdgaFXANjMgzSUZZrP5D9WAP_OGxRohEjLrLXxvK"/>
+</div>
+<div class="p-8">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Yoga &amp; Wellness</h3>
+<h4 class="font-body-md text-on-surface-variant italic mb-4">Γιόγκα &amp; Ευεξία</h4>
+<p class="font-body-md text-on-surface-variant">Find your inner balance through mindful movement and meditation in our open-air pavilion.</p>
+</div>
+</div>
+</div>
+<!-- 3. Nature Connection -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-[32px] bg-[#F5F5DC] shadow-[0_4px_20px_-10px_rgba(45,79,30,0.12)] border border-primary/5">
+<div class="h-full flex flex-col">
+<div class="aspect-video relative overflow-hidden">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Hands gently touching textured tree bark in a dense green forest with dappled sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZUJCTms2iDJ_Vh3ZqJV6gVaKEpKN2Xu9CEfk8F7hwqA72aeshFmG9xRGLbK7O4RE2mKc4je-JX_-OsPZgrFGLoWwnOGZucrEpBfzEKH6Sr2OoYHFvYW8qMXzzWsBAYQ3gJ_ZHkAcqT3tYQnZkg_4DotrCaHfQuhkB5UZ1H78s6aXOJmMASDlULesTPkPATrcPkvj9KrLK-sO7rKspxImZreUqx0K_J1ZcZAagAupphhdmlb2zKgB2hFf2zM3J7f7bryGyvmh7LdNU"/>
+</div>
+<div class="p-8">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Nature Connection</h3>
+<h4 class="font-body-md text-on-surface-variant italic mb-4">Σύνδεση με τη Φύση</h4>
+<p class="font-body-md text-on-surface-variant">Guided sensory walks and forest bathing practices to ground your spirit.</p>
+</div>
+</div>
+</div>
+<!-- 4. Cultural Workshops -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-[32px] bg-[#F5F5DC] shadow-[0_4px_20px_-10px_rgba(45,79,30,0.12)] border border-primary/5">
+<div class="h-full flex flex-col">
+<div class="aspect-video relative overflow-hidden">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Traditional pottery being shaped on a wheel by artisan hands in a rustic open-air studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD75hQnQ3DaVDptwm2cfyAfXOU6PCECzUfslZFcHMx08JOEWwLo75C57fpQmODCpYbG0mU7HFEF4HEEMqCbV9huaOBLyYFxXoXzaNQqhJG_Y8Dw3-T84WIDT4QKCQFluz1US50tA-S7eQIjXisRunPszGUmocFqkgdWc1L321U8DhfmhSD8bTb4UhHCFwZyrf6S7mIVEoUa1C593hdPYFzFieCyhMnRGw7C5iR0g39VGvh1968gC5rv_GaTp0X_IzG3mYm-WAUWHvwO"/>
+</div>
+<div class="p-8">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Cultural Workshops</h3>
+<h4 class="font-body-md text-on-surface-variant italic mb-4">Πολιτιστικά Εργαστήρια</h4>
+<p class="font-body-md text-on-surface-variant">Explore heritage through traditional crafts, music, and seasonal storytelling.</p>
+</div>
+</div>
+</div>
+<!-- 5. Creative Learning -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-[32px] bg-[#F5F5DC] shadow-[0_4px_20px_-10px_rgba(45,79,30,0.12)] border border-primary/5">
+<div class="h-full flex flex-col">
+<div class="aspect-video relative overflow-hidden">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Watercolor paintings of botanicals drying on a wooden table in a brightly lit studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCw1LmQHZ6XwyJidKwG0zLojbOd_rGCWF76hzborMef8UEN9cqTUX-jjxB1kPpo2UXn9X5XWiuOGNf6R-5fP2Eo2LSd_g6mAolSe99aoTcAhzyuo-dLxsPCs-MmN7a5QP9VxSlOYGzBXwYsP4IVwgvONWqNmrr78tJu7I3FC5tD7I-PAgZE6rL5Kxc3XHaNYHioVCFTRBBxxr5-GM_KuxwwsymimeB44Vq7JBFIFzSR3_dsZv7bmPOYDhlZSFUC70aMiD7UJf4VIIhN"/>
+</div>
+<div class="p-8">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Creative Learning</h3>
+<h4 class="font-body-md text-on-surface-variant italic mb-4">Δημιουργική Μάθηση</h4>
+<p class="font-body-md text-on-surface-variant">Unlock your creative potential with painting, writing, and photography sessions.</p>
+</div>
+</div>
+</div>
+<!-- 6. Community Gatherings -->
+<div class="md:col-span-6 group relative overflow-hidden rounded-[32px] bg-[#F5F5DC] shadow-[0_4px_20px_-10px_rgba(45,79,30,0.12)] border border-primary/5">
+<div class="h-[300px] relative">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="People sharing a long rustic table dinner outdoors under fairy lights and a twilight sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANsTRoLYeoHbrhoVAjSTAm-ZiKHs-smDFAICfXtjMw3cZ4JdtxECwcR6wu6McMWKdgSqx_acVcuEt4Hh7F9UVXNrgTVK9TyVfNhY6EOnS8ZHU0hu-CcAM9Znbt-SgMJWiUE78qOztZPwlreKPv8ZuswbKE_rOAYnvK-Wr5lFTKQIYc_3sQ9OtkCtwoDTNjq-28602Mi-uBjuGvjrkY_vRXqDVaTwH5R7dn6IJkmW6EbC5NTA-eYMBZYMQ5mS0dPHeu8KWGlRdFXSHw"/>
+<div class="absolute inset-0 bg-black/30"></div>
+<div class="absolute inset-0 flex flex-col justify-center items-center text-center p-8">
+<h3 class="font-headline-lg text-headline-lg text-white mb-2">Community Gatherings</h3>
+<h4 class="font-body-lg text-white/90 italic">Κοινοτικές Συναντήσεις</h4>
+</div>
+</div>
+</div>
+<!-- 7. Outdoor Experiences -->
+<div class="md:col-span-6 group relative overflow-hidden rounded-[32px] bg-[#F5F5DC] shadow-[0_4px_20px_-10px_rgba(45,79,30,0.12)] border border-primary/5">
+<div class="h-[300px] relative">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Hiker standing on a rocky outcrop overlooking a vast valley at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvRz-ntAUm1Qz2crALNwhks7GcHzenHpD9-DIp4GohyBOBznXKntQGYMvVPrnfTYcKJ84eTXcspsZOeBbnwXISgzjZMqyqND-pFFhhHB1BBolMiV3XWJD0WM7kNuUee1GH9JXRfn78Hf1oowmXGoUY2d8cmW0W2rmuHhj5l0H1zUsBs0Ulqik84Pq-QIkNTlllTFCyAAnS2Ecg2U1dOKJvcnPCsQnf-RXili-x21rzrXaHtSnkBgboeB65C7WZz9YciiTJ8PbnW3T0"/>
+<div class="absolute inset-0 bg-black/30"></div>
+<div class="absolute inset-0 flex flex-col justify-center items-center text-center p-8">
+<h3 class="font-headline-lg text-headline-lg text-white mb-2">Outdoor Experiences</h3>
+<h4 class="font-body-lg text-white/90 italic">Υπαίθριες Εμπειρίες</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="mt-32 px-8 md:px-24">
+<div class="bg-primary-container rounded-[40px] p-12 md:p-24 text-center text-on-primary shadow-xl">
+<span class="material-symbols-outlined text-5xl mb-6 block" data-icon="calendar_month">calendar_month</span>
+<h2 class="font-headline-xl text-headline-xl mb-6">Ready to Join Us?</h2>
+<p class="font-body-lg text-body-lg max-w-2xl mx-auto mb-10 text-on-primary-container">
+                    View our calendar for upcoming session dates and book your spot today. We look forward to welcoming you to the garden.
+                </p>
+<div class="flex flex-col md:flex-row justify-center gap-6">
+<button class="bg-white text-primary font-headline-md px-10 py-4 rounded-full hover:scale-[1.02] transition-all">View Calendar</button>
+<button class="border border-white/30 text-white font-headline-md px-10 py-4 rounded-full hover:bg-white/10 transition-all">Contact for Groups</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-24 pb-12 mt-32 rounded-t-[40px] md:rounded-t-[80px] bg-[#F5F5DC] border-t border-[#2D4F1E]/10 shadow-[0_-10px_40px_-20px_rgba(45,79,30,0.1)]">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16 px-8 md:px-24 max-w-7xl mx-auto">
+<div>
+<div class="text-xl font-bold text-[#2D4F1E] font-headline-md mb-6">Calme Garden</div>
+<p class="font-['Manrope'] text-sm leading-relaxed text-[#2D4F1E]/70 mb-8">
+                    An eco-cultural center dedicated to the harmony of human and environment. Located in the heart of Kalyvia Thorikou.
+                </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-[#2D4F1E]" data-icon="eco">eco</span>
+<span class="material-symbols-outlined text-[#2D4F1E]" data-icon="nature">nature</span>
+<span class="material-symbols-outlined text-[#2D4F1E]" data-icon="temple_buddhist">temple_buddhist</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<nav class="flex flex-col gap-3">
+<a class="font-['Manrope'] text-sm text-[#2D4F1E]/60 hover:text-[#2D4F1E] hover:translate-x-1 transition-all" href="#">Home</a>
+<a class="font-['Manrope'] text-sm text-[#2D4F1E]/60 hover:text-[#2D4F1E] hover:translate-x-1 transition-all" href="#">About Us</a>
+<a class="font-['Manrope'] text-sm text-[#2D4F1E] underline underline-offset-4" href="#">Activities</a>
+<a class="font-['Manrope'] text-sm text-[#2D4F1E]/60 hover:text-[#2D4F1E] hover:translate-x-1 transition-all" href="#">Events &amp; Retreats</a>
+</nav>
+<nav class="flex flex-col gap-3">
+<a class="font-['Manrope'] text-sm text-[#2D4F1E]/60 hover:text-[#2D4F1E] hover:translate-x-1 transition-all" href="#">Educational Programs</a>
+<a class="font-['Manrope'] text-sm text-[#2D4F1E]/60 hover:text-[#2D4F1E] hover:translate-x-1 transition-all" href="#">Products</a>
+<a class="font-['Manrope'] text-sm text-[#2D4F1E]/60 hover:text-[#2D4F1E] hover:translate-x-1 transition-all" href="#">Contact</a>
+<a class="font-['Manrope'] text-sm text-[#2D4F1E]/60 hover:text-[#2D4F1E] hover:translate-x-1 transition-all" href="#">Instagram</a>
+</nav>
+</div>
+<div>
+<h4 class="font-headline-md text-primary mb-6">Location</h4>
+<p class="font-['Manrope'] text-sm leading-relaxed text-[#2D4F1E]/70 mb-4">
+                    Ρόδων, Καλύβια Θορικού,<br/>
+                    East Attica, Greece
+                </p>
+<div class="rounded-2xl overflow-hidden h-32 w-full">
+<img alt="" class="w-full h-full object-cover" data-alt="Abstract aerial map showing green paths and natural terrain of East Attica" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2AvbocSfJJJ7VhKQRvntCWH5XtsblqEh0TB-d-JxKCeLacMBfM0sd5kxWjbPn65J4TbCWrKP3iMOviNdbX4WpUhBVsxi5W1Zfz7lc8cqSCijpXosZoVfDoL8rsfeXLabW1jEhWPM2RHHAQkZeRppHr0-ZfmpCOw_E-8f8PA9hni1gxnEVdEvhni7Nc9qR5Ca3tXZBnbuyrk48izcPsP65MkrTLU_kYuLXiNnHRQuPrL6S1El6V2rjpai3Jsg6WN9io3SXFv0rUB_a"/>
+</div>
+</div>
+</div>
+<div class="mt-20 px-8 md:px-24 border-t border-[#2D4F1E]/5 pt-8 text-center">
+<p class="font-['Manrope'] text-xs text-[#2D4F1E]/40">© 2024 Calme Garden Eco-Cultural Center. Ρόδων, Καλύβια Θορικού.</p>
+</div>
+</footer>
+</body></html>
