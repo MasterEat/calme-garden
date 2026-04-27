@@ -118,9 +118,11 @@
 <!-- TopAppBar -->
 <header class="fixed top-0 w-full z-50 bg-[#FAFAFA]/90 dark:bg-stone-950/90 backdrop-blur-md border-b border-[#2D4F1E]/5 shadow-[0_4px_20px_-10px_rgba(45,79,30,0.08)]">
 <nav class="flex justify-between items-center h-20 px-8 md:px-16 max-w-full mx-auto font-['Manrope'] font-medium tracking-tight">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-[#2D4F1E]" data-icon="park">park</span>
-<span class="text-2xl font-semibold tracking-tighter text-[#2D4F1E] dark:text-[#F5F5DC]">Calme Garden</span>
+<div class="flex items-center gap-3" data-header-brand>
+<a class="flex items-center gap-3" href="index.html">
+<img alt="Calme Garden" class="h-10 w-auto" src="assets/images/logo.webp"/>
+<span class="text-2xl font-semibold tracking-tighter text-[#2D4F1E] font-headline-md">Calme Garden</span>
+</a>
 </div>
 <div class="hidden md:flex items-center gap-8">
 <a class="text-[#2D4F1E]/70 hover:text-[#2D4F1E] transition-colors" href="index.html">Home</a>
@@ -130,7 +132,7 @@
 <a class="text-[#2D4F1E]/70 hover:text-[#2D4F1E] transition-colors" href="programs.html">Educational Programs</a>
 </div>
 <div class="flex items-center gap-4">
-<button class="text-[#2D4F1E] font-semibold text-sm hover:bg-[#F5F5DC]/50 p-2 rounded-lg transition-all duration-300">EL | EN</button>
+<div class="cg-lang-switcher"></div>
 <button class="md:hidden material-symbols-outlined text-[#2D4F1E]">menu</button>
 </div>
 </nav>
@@ -145,7 +147,7 @@
 <div class="container mx-auto px-margin relative z-10">
 <div class="max-w-2xl">
 <span class="font-label-md text-label-md text-primary mb-4 block tracking-widest uppercase">Experience Nature's Harmony</span>
-<h1 class="font-headline-xl text-headline-xl text-primary mb-6 leading-none">Events &amp; Retreats / Εκδηλώσεις &amp; Retreats</h1>
+<h1 class="font-headline-xl text-headline-xl text-primary mb-6 leading-none" data-el="Εκδηλώσεις &amp; Retreats" data-en="Events &amp; Retreats">Εκδηλώσεις &amp; Retreats</h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg">
                         Find restoration and connection in our eco-cultural sanctuary. From intimate private gatherings to corporate nature retreats.
                     </p>

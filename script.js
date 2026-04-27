@@ -14,7 +14,7 @@
   function getLang() {
     const stored = localStorage.getItem('cg-lang');
     if (stored === 'el' || stored === 'en') return stored;
-    return document.documentElement.lang?.toLowerCase().startsWith('el') ? 'el' : 'en';
+    return 'el';
   }
 
   function setLang(lang) {
@@ -34,8 +34,15 @@
       if (item) el.textContent = item[lang];
     });
 
-    document.querySelectorAll('[data-lang]').forEach((el) => {
-      el.style.display = el.getAttribute('data-lang') === lang ? '' : 'none';
+    document.querySelectorAll('[data-el][data-en]').forEach((el) => {
+      const value = el.getAttribute(lang === 'el' ? 'data-el' : 'data-en');
+      if (value != null) {
+        if (el.hasAttribute('data-i18n-html')) {
+          el.innerHTML = value;
+        } else {
+          el.textContent = value;
+        }
+      }
     });
   }
 
@@ -75,45 +82,86 @@
     });
   }
 
+  function ensureLogo(brand) {
+    if (!brand) return;
+    const fallbackText = (brand.textContent || 'Calme Garden').trim() || 'Calme Garden';
+    brand.innerHTML = '';
+    const link = document.createElement('a');
+    link.href = 'index.html';
+    link.className = 'flex items-center gap-3';
+
+    const img = document.createElement('img');
+    img.src = 'assets/images/logo.webp';
+    img.alt = 'Calme Garden';
+    img.className = 'h-10 w-auto';
+    img.onerror = () => {
+      img.remove();
+      const txt = document.createElement('span');
+      txt.className = 'text-2xl font-semibold tracking-tighter text-[#2D4F1E]';
+      txt.textContent = fallbackText;
+      link.appendChild(txt);
+    };
+
+    const text = document.createElement('span');
+    text.className = 'text-2xl font-semibold tracking-tighter text-[#2D4F1E]';
+    text.textContent = fallbackText;
+
+    link.append(img, text);
+    brand.appendChild(link);
+  }
+
   function setupHeader() {
     const header = document.querySelector('header, body > nav.fixed');
     if (!header) return;
-    const row = header.querySelector('.flex.justify-between.items-center') || header.querySelector('nav.flex.justify-between.items-center');
+
+    const row = header.querySelector(':scope > .flex.justify-between.items-center')
+      || header.querySelector(':scope > nav.flex.justify-between.items-center')
+      || header.querySelector('.flex.justify-between.items-center')
+      || header.querySelector('nav.flex.justify-between.items-center');
     if (!row) return;
 
-    let desktop = row.querySelector('.cg-desktop-nav')
-      || row.querySelector('nav.hidden.md\\:flex')
-      || row.querySelector('div.hidden.md\\:flex');
+    const rowChildren = Array.from(row.children);
+    const brand = rowChildren[0];
+    ensureLogo(brand);
+
+    let desktop = row.querySelector('.cg-desktop-nav') || row.querySelector('nav.hidden.md\\:flex') || row.querySelector('div.hidden.md\\:flex');
     if (!desktop) {
       desktop = document.createElement('nav');
       desktop.className = 'hidden md:flex items-center gap-8';
-      (row.firstElementChild || row).after(desktop);
+      row.insertBefore(desktop, rowChildren[1] || null);
     }
-    desktop.classList.add('cg-desktop-nav');
+    desktop.className = (desktop.className || '').replace(/\bcg-desktop-nav\b/g, '').trim() + ' cg-desktop-nav hidden md:flex items-center gap-8';
     buildDesktopNav(desktop);
 
-    let actionWrap = Array.from(row.children).find((el) => el !== desktop && el.classList?.contains('flex'));
+    row.querySelectorAll('button, .cg-lang-switcher').forEach((el) => {
+      if (el.closest('.cg-header-actions') || el.closest('.cg-mobile-menu')) return;
+      if (el.matches('button') && (el.textContent || '').includes('EL | EN')) el.remove();
+      if (el.classList.contains('cg-lang-switcher')) el.remove();
+    });
+
+    let actionWrap = row.querySelector('.cg-header-actions');
     if (!actionWrap) {
       actionWrap = document.createElement('div');
-      actionWrap.className = 'flex items-center gap-4';
+      actionWrap.className = 'cg-header-actions flex items-center gap-4';
       row.appendChild(actionWrap);
     }
 
-    let langWrap = row.querySelector('.cg-lang-switcher');
+    let langWrap = actionWrap.querySelector('.cg-lang-switcher');
     if (!langWrap) {
-      const oldLang = actionWrap.querySelector('button:not(.md\\:hidden):not([data-mobile-menu-toggle])');
       langWrap = document.createElement('div');
-      langWrap.className = (oldLang ? oldLang.className : 'text-sm font-medium') + ' cg-lang-switcher';
-      oldLang ? oldLang.replaceWith(langWrap) : actionWrap.prepend(langWrap);
+      langWrap.className = 'cg-lang-switcher text-sm font-medium px-2 py-1 rounded-full';
+      actionWrap.prepend(langWrap);
     }
     buildLangSwitcher(langWrap);
 
-    let menuBtn = row.querySelector('[data-mobile-menu-toggle]') || row.querySelector('button.md\\:hidden');
+    let menuBtn = actionWrap.querySelector('[data-mobile-menu-toggle]') || row.querySelector('button.md\\:hidden');
     if (!menuBtn) {
       menuBtn = document.createElement('button');
       menuBtn.type = 'button';
       menuBtn.className = 'md:hidden material-symbols-outlined text-[#2D4F1E]';
       menuBtn.textContent = 'menu';
+      actionWrap.appendChild(menuBtn);
+    } else if (!actionWrap.contains(menuBtn)) {
       actionWrap.appendChild(menuBtn);
     }
     menuBtn.setAttribute('data-mobile-menu-toggle', 'true');
@@ -148,10 +196,12 @@
 
   function patchKnownMenuLinks() {
     const map = {
-      Home: 'index.html', About: 'about.html', 'About Us': 'about.html',
-      Activities: 'activities.html', Events: 'events.html', 'Events & Retreats': 'events.html',
-      'Educational Programs': 'programs.html', Educational: 'programs.html', Education: 'programs.html',
-      Products: 'products.html', Contact: 'contact.html', 'Contact Us': 'contact.html'
+      Home: 'index.html', About: 'about.html', 'About Us': 'about.html', 'Σχετικά': 'about.html',
+      Activities: 'activities.html', 'Δραστηριότητες': 'activities.html',
+      Events: 'events.html', 'Events & Retreats': 'events.html', 'Εκδηλώσεις & Retreats': 'events.html',
+      'Educational Programs': 'programs.html', Educational: 'programs.html', Education: 'programs.html', 'Εκπαιδευτικά Προγράμματα': 'programs.html',
+      Products: 'products.html', 'Προϊόντα': 'products.html',
+      Contact: 'contact.html', 'Contact Us': 'contact.html', 'Επικοινωνία': 'contact.html', 'Αρχική': 'index.html'
     };
     document.querySelectorAll('a').forEach((a) => {
       const text = a.textContent.replace(/\s+/g, ' ').trim();
