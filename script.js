@@ -37,12 +37,22 @@
     document.querySelectorAll('[data-el][data-en]').forEach((el) => {
       const value = el.getAttribute(lang === 'el' ? 'data-el' : 'data-en');
       if (value != null) {
-        if (el.hasAttribute('data-i18n-html')) {
+        if (el.getAttribute('data-i18n-html') === 'true') {
           el.innerHTML = value;
         } else {
           el.textContent = value;
         }
       }
+    });
+
+    document.querySelectorAll('[data-el-placeholder][data-en-placeholder]').forEach((el) => {
+      const value = el.getAttribute(lang === 'el' ? 'data-el-placeholder' : 'data-en-placeholder');
+      if (value != null) el.setAttribute('placeholder', value);
+    });
+
+    document.querySelectorAll('[data-el-aria-label][data-en-aria-label]').forEach((el) => {
+      const value = el.getAttribute(lang === 'el' ? 'data-el-aria-label' : 'data-en-aria-label');
+      if (value != null) el.setAttribute('aria-label', value);
     });
   }
 
