@@ -65,7 +65,7 @@
       a.textContent = item[lang];
       a.setAttribute('data-i18n-key', item.key);
       a.className = item.href === currentPage
-        ? 'text-[#2D4F1E] font-medium border-b border-[#2D4F1E]/30 pb-1'
+        ? 'text-[#2D4F1E] font-bold border-b-2 border-[#2D4F1E] pb-1'
         : 'text-[#2D4F1E]/70 hover:text-[#2D4F1E] transition-colors';
       if (item.href === currentPage) a.setAttribute('aria-current', 'page');
       container.appendChild(a);
@@ -79,7 +79,7 @@
     const mk = (lang) => {
       const b = document.createElement('button');
       b.type = 'button';
-      b.className = 'px-1.5';
+      b.className = 'px-1';
       b.textContent = lang.toUpperCase();
       b.setAttribute('data-lang-toggle', lang);
       return b;
@@ -98,22 +98,22 @@
     brand.innerHTML = '';
     const link = document.createElement('a');
     link.href = 'index.html';
-    link.className = 'flex items-center gap-2';
+    link.className = 'flex items-center gap-3';
 
     const img = document.createElement('img');
     img.src = 'assets/images/logo.webp';
     img.alt = 'Calme Garden';
-    img.className = 'h-8 w-auto';
+    img.className = 'h-10 w-auto';
     img.onerror = () => {
       img.remove();
       const txt = document.createElement('span');
-      txt.className = 'text-xl font-medium tracking-tight text-[#2D4F1E]';
+      txt.className = 'text-2xl font-semibold tracking-tighter text-[#2D4F1E]';
       txt.textContent = fallbackText;
       link.appendChild(txt);
     };
 
     const text = document.createElement('span');
-    text.className = 'text-xl font-medium tracking-tight text-[#2D4F1E]';
+    text.className = 'text-2xl font-semibold tracking-tighter text-[#2D4F1E]';
     text.textContent = fallbackText;
 
     link.append(img, text);
@@ -140,7 +140,7 @@
       desktop.className = 'hidden md:flex items-center gap-8';
       row.insertBefore(desktop, rowChildren[1] || null);
     }
-    desktop.className = (desktop.className || '').replace(/\bcg-desktop-nav\b/g, '').trim() + ' cg-desktop-nav hidden md:flex items-center gap-7';
+    desktop.className = (desktop.className || '').replace(/\bcg-desktop-nav\b/g, '').trim() + ' cg-desktop-nav hidden md:flex items-center gap-8';
     buildDesktopNav(desktop);
 
     row.querySelectorAll('button, .cg-lang-switcher').forEach((el) => {
@@ -152,14 +152,14 @@
     let actionWrap = row.querySelector('.cg-header-actions');
     if (!actionWrap) {
       actionWrap = document.createElement('div');
-      actionWrap.className = 'cg-header-actions flex items-center gap-3';
+      actionWrap.className = 'cg-header-actions flex items-center gap-4';
       row.appendChild(actionWrap);
     }
 
     let langWrap = actionWrap.querySelector('.cg-lang-switcher');
     if (!langWrap) {
       langWrap = document.createElement('div');
-      langWrap.className = 'cg-lang-switcher text-xs font-medium px-2 py-1 rounded-full';
+      langWrap.className = 'cg-lang-switcher text-sm font-medium px-2 py-1 rounded-full';
       actionWrap.prepend(langWrap);
     }
     buildLangSwitcher(langWrap);
@@ -188,11 +188,15 @@
         a.href = item.href;
         a.textContent = item[getLang()];
         a.setAttribute('data-i18n-key', item.key);
-        a.className = item.href === currentPage ? 'text-[#2D4F1E] font-medium' : 'text-[#2D4F1E]/80';
+        a.className = item.href === currentPage ? 'text-[#2D4F1E] font-bold' : 'text-[#2D4F1E]/80';
         list.appendChild(a);
       });
 
-      mobilePanel.append(list);
+      const mobileLang = document.createElement('div');
+      mobileLang.className = 'cg-lang-switcher pt-3 mt-3 border-t border-[#2D4F1E]/10';
+      buildLangSwitcher(mobileLang);
+
+      mobilePanel.append(list, mobileLang);
       header.appendChild(mobilePanel);
       list.addEventListener('click', (e) => e.target.closest('a') && mobilePanel.classList.add('hidden'));
     }
