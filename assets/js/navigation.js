@@ -6,7 +6,6 @@
     { href: 'events.html', el: 'Εκδηλώσεις', en: 'Events' },
     { href: 'programs.html', el: 'Προγράμματα', en: 'Programs' },
     { href: 'products.html', el: 'Δημιουργίες', en: 'Products' },
-    { href: 'ecocultural.html', el: 'Eco-Cultural', en: 'Eco-Cultural' },
     { href: 'contact.html', el: 'Επικοινωνία', en: 'Contact' }
   ];
 
