@@ -115,21 +115,35 @@
 <header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-sm dark:bg-surface-dim/90 border-b border-outline-variant/30">
 <div class="flex justify-between items-center max-w-7xl mx-auto px-container-mobile md:px-container-desktop h-20">
 <div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-primary cursor-pointer" data-icon="menu">menu</span>
-<h1 class="font-headline-md text-headline-md text-primary">Calme Garden</h1>
+<button class="text-primary cursor-pointer hover:opacity-80 transition-opacity md:hidden" type="button" data-menu-toggle aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<a class="font-headline-md text-headline-md text-primary dark:text-primary-fixed tracking-tight" href="index.html">Calme Garden</a>
 </div>
-<nav class="hidden md:flex gap-8">
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Home</a>
-<a class="text-secondary border-b-2 border-secondary pb-1" href="#">About</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Activities</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Products</a>
+<nav class="hidden md:flex gap-6 items-center" aria-label="Main navigation">
+<a class="font-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="index.html" data-nav-label data-el="Αρχική" data-en="Home">Αρχική</a>
+<a class="font-label-caps text-secondary border-b-2 border-secondary pb-1" href="about.html" data-nav-label data-el="Σχετικά" data-en="About" aria-current="page">Σχετικά</a>
+<a class="font-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="activities.html" data-nav-label data-el="Δραστηριότητες" data-en="Activities">Δραστηριότητες</a>
+<a class="font-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="events.html" data-nav-label data-el="Εκδηλώσεις" data-en="Events">Εκδηλώσεις</a>
+<a class="font-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="programs.html" data-nav-label data-el="Προγράμματα" data-en="Programs">Προγράμματα</a>
+<a class="font-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="products.html" data-nav-label data-el="Δημιουργίες" data-en="Products">Δημιουργίες</a>
+<a class="font-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="ecocultural.html" data-nav-label data-el="Eco-Cultural" data-en="Eco-Cultural">Eco-Cultural</a>
+<a class="font-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="contact.html" data-nav-label data-el="Επικοινωνία" data-en="Contact">Επικοινωνία</a>
 </nav>
 <div class="flex items-center">
-<button class="font-headline-sm text-headline-sm text-primary uppercase text-sm tracking-widest">
-<span class="underline decoration-secondary decoration-2 underline-offset-4">ΕΛ</span> | EN
-                </button>
+<button class="font-headline-sm text-label-caps text-primary hover:opacity-80 transition-opacity" type="button" data-language-toggle aria-label="Switch language"><span class="border-b-2 border-secondary">EL</span> | EN</button>
 </div>
 </div>
+<nav id="mobile-menu" class="hidden md:hidden bg-surface border-t border-outline-variant/30 px-container-mobile py-4" aria-label="Mobile navigation">
+<a class="block font-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200 pl-3 py-2" href="index.html" data-nav-label data-el="Αρχική" data-en="Home">Αρχική</a>
+<a class="block font-label-caps text-secondary border-l-2 border-secondary pl-3 py-2" href="about.html" data-nav-label data-el="Σχετικά" data-en="About" aria-current="page">Σχετικά</a>
+<a class="block font-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200 pl-3 py-2" href="activities.html" data-nav-label data-el="Δραστηριότητες" data-en="Activities">Δραστηριότητες</a>
+<a class="block font-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200 pl-3 py-2" href="events.html" data-nav-label data-el="Εκδηλώσεις" data-en="Events">Εκδηλώσεις</a>
+<a class="block font-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200 pl-3 py-2" href="programs.html" data-nav-label data-el="Προγράμματα" data-en="Programs">Προγράμματα</a>
+<a class="block font-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200 pl-3 py-2" href="products.html" data-nav-label data-el="Δημιουργίες" data-en="Products">Δημιουργίες</a>
+<a class="block font-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200 pl-3 py-2" href="ecocultural.html" data-nav-label data-el="Eco-Cultural" data-en="Eco-Cultural">Eco-Cultural</a>
+<a class="block font-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200 pl-3 py-2" href="contact.html" data-nav-label data-el="Επικοινωνία" data-en="Contact">Επικοινωνία</a>
+</nav>
 </header>
 <main class="pt-20">
 <!-- Hero Section -->
@@ -240,19 +254,20 @@
 <div class="flex flex-col gap-4">
 <h3 class="font-label-caps text-label-caps text-secondary uppercase">Explore</h3>
 <nav class="flex flex-col gap-2">
-<a class="text-on-surface-variant hover:underline decoration-secondary transition-all" href="#">Volunteer</a>
-<a class="text-on-surface-variant hover:underline decoration-secondary transition-all" href="#">Programs</a>
-<a class="text-on-surface-variant hover:underline decoration-secondary transition-all" href="#">Products</a>
+<a class="text-on-surface-variant hover:underline decoration-secondary transition-all" href="contact.html">Volunteer</a>
+<a class="text-on-surface-variant hover:underline decoration-secondary transition-all" href="programs.html">Programs</a>
+<a class="text-on-surface-variant hover:underline decoration-secondary transition-all" href="products.html">Products</a>
 </nav>
 </div>
 <div class="flex flex-col gap-4">
 <h3 class="font-label-caps text-label-caps text-secondary uppercase">Legal</h3>
 <nav class="flex flex-col gap-2">
-<a class="text-on-surface-variant hover:underline decoration-secondary transition-all" href="#">Privacy Policy</a>
-<a class="text-on-surface-variant hover:underline decoration-secondary transition-all" href="#">Terms of Service</a>
-<a class="text-on-surface-variant hover:underline decoration-secondary transition-all" href="#">Sustainability Report</a>
+<a class="text-on-surface-variant hover:underline decoration-secondary transition-all" href="contact.html">Privacy Policy</a>
+<a class="text-on-surface-variant hover:underline decoration-secondary transition-all" href="contact.html">Terms of Service</a>
+<a class="text-on-surface-variant hover:underline decoration-secondary transition-all" href="ecocultural.html">Sustainability Report</a>
 </nav>
 </div>
 </div>
 </footer>
+<script src="assets/js/navigation.js"></script>
 </body></html>
