@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html class="light" lang="el"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&amp;family=Source+Sans+3:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary": "#974723",
+                    "on-secondary-fixed": "#370e00",
+                    "on-primary-fixed-variant": "#324c3e",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#496455",
+                    "surface-container-low": "#f5f3ee",
+                    "on-primary-container": "#98b5a3",
+                    "secondary-fixed-dim": "#ffb598",
+                    "on-primary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "inverse-on-surface": "#f2f1ec",
+                    "tertiary-container": "#3a4627",
+                    "outline": "#727973",
+                    "tertiary-fixed-dim": "#becca3",
+                    "on-secondary-fixed-variant": "#79300e",
+                    "on-primary-fixed": "#062014",
+                    "surface-variant": "#e4e2dd",
+                    "inverse-primary": "#b0cdbb",
+                    "on-tertiary-fixed-variant": "#3f4b2c",
+                    "outline-variant": "#c2c8c2",
+                    "secondary-fixed": "#ffdbce",
+                    "on-secondary": "#ffffff",
+                    "on-surface-variant": "#424844",
+                    "primary": "#173124",
+                    "surface-container-highest": "#e4e2dd",
+                    "surface-dim": "#dbdad5",
+                    "error-container": "#ffdad6",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#dae8be",
+                    "on-secondary-container": "#772f0c",
+                    "background": "#fbf9f4",
+                    "primary-container": "#2d4739",
+                    "on-tertiary-fixed": "#141f05",
+                    "surface": "#fbf9f4",
+                    "error": "#ba1a1a",
+                    "inverse-surface": "#30312e",
+                    "tertiary": "#242f13",
+                    "surface-container": "#f0eee9",
+                    "surface-bright": "#fbf9f4",
+                    "on-tertiary-container": "#a6b48d",
+                    "secondary-container": "#ff996e",
+                    "surface-container-high": "#eae8e3",
+                    "on-background": "#1b1c19",
+                    "on-surface": "#1b1c19",
+                    "primary-fixed-dim": "#b0cdbb",
+                    "primary-fixed": "#ccead6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "section-gap-mobile": "48px",
+                    "container-padding-desktop": "80px",
+                    "gutter": "16px",
+                    "unit": "4px",
+                    "section-gap-desktop": "96px",
+                    "container-padding-mobile": "24px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Libre Caslon Text"],
+                    "display-lg": ["Libre Caslon Text"],
+                    "headline-sm": ["Libre Caslon Text"],
+                    "body-lg": ["Source Sans 3"],
+                    "label-caps": ["Source Sans 3"],
+                    "display-lg-mobile": ["Libre Caslon Text"],
+                    "body-md": ["Source Sans 3"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fbf9f4;
+            color: #1b1c19;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-body-md selection:bg-secondary-fixed selection:text-on-secondary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-sm dark:bg-surface-dim/90 border-b border-outline-variant/30">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-container-mobile md:px-container-desktop h-20">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-80 transition-opacity" data-icon="menu">menu</span>
+<span class="font-headline-md text-headline-md text-primary dark:text-primary-fixed">Calme Garden</span>
+</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Home</a>
+<a class="font-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">About</a>
+<a class="font-label-caps text-secondary border-b-2 border-secondary pb-1" href="#">Products</a>
+<a class="font-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Contact</a>
+</nav>
+<div class="font-headline-md text-headline-md text-primary dark:text-primary-fixed cursor-pointer hover:opacity-80 transition-opacity">
+                ΕΛ | EN
+            </div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="px-container-mobile md:px-container-desktop py-section-gap-mobile md:py-section-gap-desktop max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div>
+<span class="font-label-caps text-secondary tracking-widest block mb-4">HANDMADE IN GREECE</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">
+                        Garden Creations<br/>
+<span class="italic text-on-surface-variant">Δημιουργίες του Κήπου</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                        A mindful collection of artifacts inspired by the Mediterranean landscape. Each piece follows the seasonal rhythm of the garden, respecting the slow transition from seed to soil.
+                    </p>
+</div>
+<div class="relative aspect-[4/5] bg-surface-container-low overflow-hidden rounded-xl">
+<img alt="Garden Essence" class="w-full h-full object-cover grayscale-[20%] sepia-[10%] hover:scale-105 transition-transform duration-700" data-alt="A cinematic close-up of sun-drenched hands gently touching dried Mediterranean herbs inside a rustic terracotta vessel. The lighting is warm and natural, creating soft shadows against a textured limestone wall. The aesthetic is organic and editorial, featuring a muted palette of sage greens, sandy beiges, and deep forest green tones typical of a minimalist luxury brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBU8bAlPCyLy_WvKrEYkyJA-gkekr5oHQVrYIlRCFWbMjL-mqgXD3c5pHd6JwMMtqhWincVteIV4O8z5SLWlEviH56emNBWDgOtLnz48Zk5XFm2efBh8T5sF-Oz3jT_9ZCz95EQxKpQjk3y4ySq1nAh63kYFaGP_FBpM_d1zx9oltOowEiZx6-2R1glk3BSLHIipQeFwhZdq7cLP5np5C2JjCCjWpAMhhIY_ntykAQQRR8aL9xfqndJP4zRalap2Aqf5WlOegwkKC8"/>
+</div>
+</div>
+</section>
+<!-- Low Waste Philosophy Section -->
+<section class="bg-surface-container-low py-section-gap-mobile md:py-section-gap-desktop">
+<div class="max-w-7xl mx-auto px-container-mobile md:px-container-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="space-y-4">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="eco">eco</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Seasonal Rhythm</h3>
+<p class="text-on-surface-variant">We only create what the garden offers. Our production is dictated by the blooming cycles and the natural resting periods of the earth.</p>
+</div>
+<div class="space-y-4">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="recycling">recycling</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Low-Waste Ethos</h3>
+<p class="text-on-surface-variant">Every byproduct finds its purpose. From botanical compost to recycled packaging, we ensure nothing is lost in the creative process.</p>
+</div>
+<div class="space-y-4">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="auto_awesome">auto_awesome</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Artisanal Integrity</h3>
+<p class="text-on-surface-variant">Handcrafted in small batches. No industrial machinery, just the patient work of human hands and the wisdom of local tradition.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Gallery (Bento-style Grid) -->
+<section class="max-w-7xl mx-auto px-container-mobile md:px-container-desktop py-section-gap-mobile md:py-section-gap-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary mb-2">The Collection</h2>
+<p class="font-body-md text-on-surface-variant">Objects of utility and beauty, made for a slower pace of life.</p>
+</div>
+<div class="flex gap-4">
+<span class="px-4 py-2 bg-primary text-on-primary rounded-sm font-label-caps cursor-pointer">All</span>
+<span class="px-4 py-2 border border-outline text-on-surface-variant rounded-sm font-label-caps cursor-pointer hover:bg-surface-container-high transition-colors">Botanical</span>
+<span class="px-4 py-2 border border-outline text-on-surface-variant rounded-sm font-label-caps cursor-pointer hover:bg-surface-container-high transition-colors">Ceramics</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Large Feature Card -->
+<div class="md:col-span-8 bg-surface-container h-[500px] group relative overflow-hidden flex flex-col md:flex-row">
+<div class="w-full md:w-1/2 p-10 flex flex-col justify-between">
+<div>
+<span class="inline-block px-2 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-caps rounded-sm mb-4">CURRENT SEASON</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Sage &amp; Wild Thyme Bundles</h3>
+<p class="text-on-surface-variant">Hand-harvested at peak aroma, tied with organic cotton. A ritual of cleansing and quietude for the home.</p>
+</div>
+<a class="group-hover:translate-x-2 transition-transform duration-300 flex items-center gap-2 text-secondary font-label-caps" href="#">
+                            INQUIRE ABOUT AVAILABILITY <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="w-full md:w-1/2 relative">
+<img alt="Herb Bundles" class="w-full h-full object-cover" data-alt="A stack of dried herb bundles tied with natural twine resting on a weathered wooden table. The lighting is soft morning sun, highlighting the silver-green textures of the sage and the tiny purple flowers of the thyme. The background is a blurred view of a Mediterranean olive grove in pale, desaturated colors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmZYXbNxck5iBZ6up0nBq6TOa1BJTOGV83S5ZIuwbFjHN4WouYDm0Ux3cAiy5j3tYkOJg5c7mKflKFceUaVzC3ucgUe5aC6az1UgS0ZZgNt7HJLr6hax2QtQZnkdPdqIzZPrBHpVgBGajLl3J7WUi4Bxye51pAkF3Bu5vkvrDZWnDJVPHyq2k-y-t-9dN4dMM9HSGsZrOi9sWqq-HYE-FcZpR21B4Z1SRYCp6Bhr4eYgknPHaD3HTjCIN2oMHOIWSyncU4Qbrk7xg"/>
+</div>
+</div>
+<!-- Square Card -->
+<div class="md:col-span-4 bg-[#E6D5B8] p-8 flex flex-col justify-end group cursor-pointer border-t-2 border-secondary">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Ceramic Seed Trays</h3>
+<p class="text-on-surface-variant mb-6">Unglazed earthenware designed to breathe with the soil. Minimalist forms for early spring propagation.</p>
+<div class="w-full h-48 relative overflow-hidden mb-6">
+<img alt="Ceramics" class="w-full h-full object-cover rounded-xl grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Modernist ceramic seed starting trays in a matte terracotta finish. The trays are arranged in a minimalist, architectural composition on a stone surface. Soft shadows and warm sand-colored tones dominate the frame, emphasizing the tactile quality of the unglazed clay." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdKUNNAM7FIvmHycmSIsFSZgcxfv6o_U0d2IE_uWlQt3sfvNr2vbf7XFreqqTGwW5vh-ACkaiNMR0h1oiU_yQnNNs7TwJManUz-PdUKSIC9fWMPZPUg3iFUWNoGTHQKMTbuw0t8MQe4jeFwfXfY0O-M_nDZsXxXJQHWZq_g7-X8lAYpfxiQ5NMx2cp2s2G3PhJ0NvLlHkqav7WVWxqGGZYcqfzYmSX6RkJHkLedoMonZKYpJyC0P1G1sDedCDpXf8A-0nlySSt-qQ"/>
+</div>
+</div>
+<!-- Horizontal Card -->
+<div class="md:col-span-5 bg-surface-container-high p-8 flex items-center gap-6">
+<div class="w-1/3">
+<img alt="Botanical Dye" class="w-full aspect-square object-cover rounded-full" data-alt="Close-up detail of organic cotton textiles dyed with plant extracts like pomegranate and onion skins. The fabric is softly draped, showing rich, uneven earthy tones. The lighting is bright and airy, creating a clean, high-end editorial feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5i-4eZDh6IgV1f6q3uOlGqTuNyh0OMP1AHEvq4C57lPJXuXI0jSlIFl7ZaftE6atMk-vrj9sNkF3ErB8MEccHIDNH0v2n-xcWft04HksfUF9IKpc19JnUPpzvXy7f85vnFxnMJCTrvlUBkgQveHVeOIZIt7QMSrg9hSwkvJwh5CsbLhBvNm6rSZhCdA87UWuhTYbi-x9Hmw9lplMPmzrXrAIwTxk7ulr3hLugKqhKi1wPL3S3tTHVutXXUd7Szg34F1ykgxYrJfU"/>
+</div>
+<div class="w-2/3">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Botanical Dyes</h3>
+<p class="text-on-surface-variant text-body-md">Natural pigments derived from pomegranate skins and olive leaves. Linen textiles for the kitchen and garden.</p>
+</div>
+</div>
+<!-- Tall Card -->
+<div class="md:col-span-7 bg-primary text-on-primary p-12 flex flex-col justify-center text-center">
+<span class="material-symbols-outlined text-secondary text-5xl mb-6" data-icon="auto_stories">auto_stories</span>
+<h3 class="font-headline-md text-headline-md mb-4">Mindful Production</h3>
+<p class="text-on-primary-container max-w-lg mx-auto mb-8">
+                        We do not operate as a traditional shop. Each creation is born from a specific moment in time. If you feel a connection to our work, please reach out for current availability and seasonal commissions.
+                    </p>
+<button class="mx-auto px-8 py-3 bg-secondary text-on-secondary rounded-sm font-label-caps hover:opacity-90 transition-opacity">
+                        CONNECT WITH THE GARDEN
+                    </button>
+</div>
+</div>
+</section>
+<!-- Quote / Divider -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop text-center px-container-mobile">
+<div class="max-w-2xl mx-auto border-y border-outline-variant/30 py-12">
+<p class="font-headline-md italic text-primary">"To plant a garden is to believe in tomorrow."</p>
+<p class="font-label-caps text-secondary mt-4">— Δημιουργία από τον Κήπο</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-container-low dark:bg-surface-container-highest border-t border-outline-variant/50">
+<div class="w-full py-section-gap-mobile md:py-section-gap-desktop px-container-mobile md:px-container-desktop flex flex-col md:flex-row justify-between gap-gutter max-w-7xl mx-auto">
+<div class="flex flex-col gap-4">
+<span class="font-headline-sm text-headline-sm text-primary">Calme Garden</span>
+<p class="font-body-md text-on-surface-variant max-w-xs">A sanctuary for slow living and artisanal creation in the heart of the Mediterranean.</p>
+</div>
+<div class="grid grid-cols-2 md:flex gap-x-12 gap-y-6">
+<div class="flex flex-col gap-3">
+<span class="font-label-caps text-primary">Navigation</span>
+<a class="font-body-md text-on-surface-variant hover:text-primary hover:underline decoration-secondary transition-all" href="#">About</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary hover:underline decoration-secondary transition-all" href="#">Activities</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary hover:underline decoration-secondary transition-all" href="#">Programs</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-caps text-primary">Philosophy</span>
+<a class="font-body-md text-on-surface-variant hover:text-primary hover:underline decoration-secondary transition-all" href="#">Privacy Policy</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary hover:underline decoration-secondary transition-all" href="#">Sustainability Report</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary hover:underline decoration-secondary transition-all" href="#">Volunteer</a>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-container-mobile md:px-container-desktop py-8 border-t border-outline-variant/20">
+<p class="font-body-md text-on-surface-variant text-center md:text-left">© 2024 Calme Garden. All rights reserved.</p>
+</div>
+</footer>
+</body></html>

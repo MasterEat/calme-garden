@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html class="light" lang="el"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Programs | Calme Garden</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&amp;family=Source+Sans+3:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary": "#974723",
+                    "on-secondary-fixed": "#370e00",
+                    "on-primary-fixed-variant": "#324c3e",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#496455",
+                    "surface-container-low": "#f5f3ee",
+                    "on-primary-container": "#98b5a3",
+                    "secondary-fixed-dim": "#ffb598",
+                    "on-primary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "inverse-on-surface": "#f2f1ec",
+                    "tertiary-container": "#3a4627",
+                    "outline": "#727973",
+                    "tertiary-fixed-dim": "#becca3",
+                    "on-secondary-fixed-variant": "#79300e",
+                    "on-primary-fixed": "#062014",
+                    "surface-variant": "#e4e2dd",
+                    "inverse-primary": "#b0cdbb",
+                    "on-tertiary-fixed-variant": "#3f4b2c",
+                    "outline-variant": "#c2c8c2",
+                    "secondary-fixed": "#ffdbce",
+                    "on-secondary": "#ffffff",
+                    "on-surface-variant": "#424844",
+                    "primary": "#173124",
+                    "surface-container-highest": "#e4e2dd",
+                    "surface-dim": "#dbdad5",
+                    "error-container": "#ffdad6",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#dae8be",
+                    "on-secondary-container": "#772f0c",
+                    "background": "#fbf9f4",
+                    "primary-container": "#2d4739",
+                    "on-tertiary-fixed": "#141f05",
+                    "surface": "#fbf9f4",
+                    "error": "#ba1a1a",
+                    "inverse-surface": "#30312e",
+                    "tertiary": "#242f13",
+                    "surface-container": "#f0eee9",
+                    "surface-bright": "#fbf9f4",
+                    "on-tertiary-container": "#a6b48d",
+                    "secondary-container": "#ff996e",
+                    "surface-container-high": "#eae8e3",
+                    "on-background": "#1b1c19",
+                    "on-surface": "#1b1c19",
+                    "primary-fixed-dim": "#b0cdbb",
+                    "primary-fixed": "#ccead6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "section-gap-mobile": "48px",
+                    "container-padding-desktop": "80px",
+                    "gutter": "16px",
+                    "unit": "4px",
+                    "section-gap-desktop": "96px",
+                    "container-padding-mobile": "24px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Libre Caslon Text"],
+                    "display-lg": ["Libre Caslon Text"],
+                    "headline-sm": ["Libre Caslon Text"],
+                    "body-lg": ["Source Sans 3"],
+                    "label-caps": ["Source Sans 3"],
+                    "display-lg-mobile": ["Libre Caslon Text"],
+                    "body-md": ["Source Sans 3"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fbf9f4;
+            color: #1b1c19;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-sm dark:bg-surface-dim/90 border-b border-outline-variant/30">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-container-mobile md:px-container-desktop h-20">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer" data-icon="menu">menu</span>
+<h1 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed">Calme Garden</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Home</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">About</a>
+<a class="font-body-md text-body-md text-secondary border-b-2 border-secondary pb-1" href="#">Programs</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Products</a>
+</nav>
+<div class="flex items-center">
+<button class="font-headline-md text-headline-md text-primary dark:text-primary-fixed hover:opacity-80 transition-opacity">ΕΛ | EN</button>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[530px] flex items-end pb-12 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Programs Header" class="w-full h-full object-cover rounded-none" data-alt="A serene landscape of a Mediterranean organic garden at golden hour, featuring olive trees and wild lavender under a soft amber sky. The lighting is warm and natural, creating a documentary-style atmosphere with rich earthy tones of sage green and deep terracotta. The composition is wide and minimalist, reflecting a sense of peace and environmental harmony." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw227AaVL_CdK7ZsSj_jCRDUjfd1bqCaEs1ofTH7ibbK69fK6-Mj40KKuOtw8_dyfQ2HmkQLlcjoxEk7Jd2-qfR3e3z4BJAluj5qqk-KQfZk2hjLQ4wXjke8RxvX9YnBXUZoL68kVLpg55MyalcQGx6oj1Uj4HrcHJIy8VXnywmrglfWUQwXDqwF4rTfRlX2DvBQ17n4r_hRYZ_SHgQ855AiOXwXgR1ldujyuvgJjf4jNYoLXvkzqYRnYgP720tvE1vKqwOXBNZjw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-container-mobile md:px-container-desktop w-full">
+<div class="max-w-2xl">
+<span class="font-label-caps text-label-caps text-secondary mb-4 block uppercase tracking-widest">Εκπαιδευτικά Προγράμματα</span>
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4 italic">Cultivating Futures</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Non-formal education, solidarity, and experiential learning in the heart of the Mediterranean landscape.</p>
+</div>
+</div>
+</section>
+<!-- Program Categories Bento Grid -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop max-w-7xl mx-auto px-container-mobile md:px-container-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Erasmus+ Collaboration -->
+<div class="md:col-span-8 bg-surface-container p-8 rounded-lg flex flex-col justify-between group hover:bg-surface-container-high transition-colors duration-300">
+<div>
+<div class="flex justify-between items-start mb-8">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="school">school</span>
+<span class="px-3 py-1 bg-primary/10 text-primary font-label-caps text-[10px] rounded-sm">OPEN FOR APPLICATIONS</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Erasmus+ &amp; International Exchange</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-lg mb-6">Connecting young minds across Europe through sustainable living workshops, cultural heritage preservation, and collaborative solidarity projects.</p>
+<div class="flex gap-2 mb-8">
+<span class="bg-surface-variant px-3 py-1 text-primary text-xs font-label-caps rounded-sm">MOBILITY</span>
+<span class="bg-surface-variant px-3 py-1 text-primary text-xs font-label-caps rounded-sm">SOLIDARITY</span>
+<span class="bg-surface-variant px-3 py-1 text-primary text-xs font-label-caps rounded-sm">CULTURE</span>
+</div>
+</div>
+<a class="inline-flex items-center text-secondary font-label-caps group-hover:translate-x-2 transition-transform" href="#">EXPLORE PROJECTS <span class="material-symbols-outlined ml-2">arrow_forward</span></a>
+</div>
+<!-- Children & Families -->
+<div class="md:col-span-4 bg-primary text-on-primary p-8 rounded-lg flex flex-col justify-between relative overflow-hidden">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-4xl mb-8" data-icon="child_care">child_care</span>
+<h3 class="font-headline-sm text-headline-sm mb-4">Roots: For Kids &amp; Families</h3>
+<p class="font-body-md text-body-md opacity-80">Experiential workshops designed to reconnect the younger generation with the soil, the seasons, and the cycles of nature.</p>
+</div>
+<div class="relative z-10 mt-8">
+<button class="bg-on-primary text-primary px-6 py-2 font-label-caps rounded-sm hover:bg-primary-fixed transition-colors">BOOK WORKSHOP</button>
+</div>
+<div class="absolute -right-12 -bottom-12 opacity-10">
+<span class="material-symbols-outlined text-[200px]" data-icon="eco">eco</span>
+</div>
+</div>
+<!-- Environmental Awareness -->
+<div class="md:col-span-4 bg-secondary-fixed text-on-secondary-container p-8 rounded-lg flex flex-col">
+<span class="material-symbols-outlined text-4xl mb-8" data-icon="nature">nature</span>
+<h3 class="font-headline-sm text-headline-sm mb-4">Eco-literacy Seminars</h3>
+<p class="font-body-md text-body-md mb-6">Bridging traditional wisdom with modern environmental science through practical, hands-on modules on biodiversity and permaculture.</p>
+<div class="mt-auto pt-4 border-t border-secondary/20">
+<p class="font-label-caps text-[10px]">NEXT SESSION: OCTOBER 2024</p>
+</div>
+</div>
+<!-- Cultural Exchange -->
+<div class="md:col-span-8 bg-surface-container-low border border-outline-variant/30 p-8 rounded-lg grid md:grid-cols-2 gap-8 items-center">
+<div class="h-48 rounded-lg overflow-hidden">
+<img alt="Cultural Exchange" class="w-full h-full object-cover grayscale-[0.3]" data-alt="A group of diverse young people sitting in a circle in an outdoor classroom setting, engaged in a vibrant discussion. The scene is lit by natural dappled sunlight filtering through olive leaves, emphasizing a documentary and authentic feel. The palette is dominated by earthy greens, warm wood tones, and natural textures, creating a sense of community and intellectual exchange." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP-RrxGkfMtcHjpG5gOr69g297_cJy-iDYwcLiZq33In4oDuuUcl1XgXiZohrYMdxw-jsx9T5hClqNbR5Z3aMBDbTLTM_ufgU1Uk6zJA6NwKcNXpQYKx05LeVax0N_iwCb08szy8JMMAGwaGBOJDp_0Mz7f5o2rRD3EDU7_ZGSZuPu7xaB7Ax9CwYzPW44gsc8e0Gv1ONdF8FQ7z5u_QTpO_kfwJOuRUUqasap-JQYtxqXGbivPiMiRtpvKSq4hE2nPqXPuPo3pr4"/>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">The Human Mosaic</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Residency programs for artists and researchers exploring the intersection of ecology and Mediterranean identity.</p>
+<a class="text-secondary font-label-caps flex items-center hover:underline" href="#">LEARN MORE <span class="material-symbols-outlined ml-1 text-sm">open_in_new</span></a>
+</div>
+</div>
+</div>
+</section>
+<!-- Documentary Quote Section -->
+<section class="bg-surface-container-highest py-section-gap-mobile md:py-section-gap-desktop">
+<div class="max-w-4xl mx-auto px-container-mobile text-center">
+<span class="material-symbols-outlined text-secondary text-5xl mb-8" data-icon="format_quote">format_quote</span>
+<blockquote class="font-display-lg-mobile md:font-headline-md text-primary mb-8 italic leading-relaxed">
+                    "Η εκπαίδευση δεν είναι η προετοιμασία για τη ζωή· η εκπαίδευση είναι η ίδια η ζωή."
+                </blockquote>
+<p class="font-label-caps text-label-caps text-on-surface-variant tracking-[0.2em]">— JOHN DEWEY, PHILOSOPHY OF EXPERIENCE</p>
+</div>
+</section>
+<!-- Detailed Programs List -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop max-w-7xl mx-auto px-container-mobile md:px-container-desktop">
+<div class="flex flex-col gap-16">
+<!-- Program 1 -->
+<div class="flex flex-col md:flex-row gap-12 items-center">
+<div class="w-full md:w-1/2">
+<img alt="The Soil Program" class="w-full aspect-[4/3] object-cover rounded-lg" data-alt="Close up of hands working with soil and small plant saplings in a sun-drenched garden. The aesthetic is clean and earthy, with high detail on the texture of the earth and the vibrant green of the young leaves. The lighting is soft and organic, following a documentary-style visual language with a focus on tactile experience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeSQPp0H6YsCRxZPRcIz8G9ApdNHu0jl7cCSCgKaOwx3mJA0FDwNVf32rtCun2MQ5inGms9rywmLnQkP2FPtyDvzujIyLOWby0EugweuwVq7DLXhzIM0WB7LW9McjX3ka-aUqYIq26_ftvNUR7OrxdFomvsJJXW2_X4TjIQXlSzYz5Ts6ks-aBcHFjQm4xvB2dyX2SB1b743NkidQmH3WRarGn9no-iIOGg5g5YcQefo2B2b8ULpAr27iq0UfQLbqlgFxN3kg_Srw"/>
+</div>
+<div class="w-full md:w-1/2">
+<span class="font-label-caps text-secondary mb-2 block">EXPERIENTIAL LEARNING</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-6">The Living Soil | Το Ζωντανό Χώμα</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                            A 6-week immersive program for adults focused on regenerative agriculture and soil health. Participants learn by doing, participating in the daily rhythms of the Calme Garden ecosystem.
+                        </p>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="calendar_today">calendar_today</span>
+<span class="font-body-md">Saturdays, Oct 12 – Nov 16</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+<span class="font-body-md">Main Garden &amp; Composting Area</span>
+</div>
+</div>
+<button class="mt-10 border border-primary text-primary px-8 py-3 font-label-caps hover:bg-primary hover:text-on-primary transition-all duration-300">DOWNLOAD CURRICULUM</button>
+</div>
+</div>
+<!-- Program 2 (Reversed) -->
+<div class="flex flex-col md:flex-row-reverse gap-12 items-center">
+<div class="w-full md:w-1/2">
+<img alt="Solidarity Projects" class="w-full aspect-[4/3] object-cover rounded-lg" data-alt="An overhead shot of a community table set outdoors under a vine trellis. Local Mediterranean foods and traditional pottery are arranged simply. The mood is warm and communal, capturing the essence of cultural exchange and hospitality. The lighting is bright but soft, emphasizing natural textures and an organic palette of beige, terracotta, and olive." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0t1W5ySMUYhYKbPTAG2vvE-hpnfKtEEz2IPR7CjEYrKP2uSRGly0Vq70x_LHcw1pRtph2inQLsasKIx-cD3zOVwlVJikq0S8uwdqiEbASfpEZfMgzso4JQ5fLcZvUugHD8nQm5ey7kTgDRXR_1WdD-_BbBxaVXsrw9ufnRcDxfsXOrjpFLTITfsviWQlFlu0Ih9dTmJvUTZh1BFPLdXtkfelI3aBmeXeLvGtEnO7BkSXnePwxUOOOUTb3IuAbQ0EDqDkUlRChnBg"/>
+</div>
+<div class="w-full md:w-1/2">
+<span class="font-label-caps text-secondary mb-2 block">SOLIDARITY &amp; ACTION</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-6">Solidarity Harvest | Ο Συλλογικός Τρύγος</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                            A community-driven program where volunteers and locals collaborate to harvest and process seasonal products, with proceeds supporting local environmental initiatives.
+                        </p>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 bg-surface-container-low border-l-4 border-secondary">
+<p class="font-label-caps text-[10px] mb-1">IMPACT</p>
+<p class="font-headline-sm text-primary">500kg+</p>
+<p class="text-xs">Donated annually</p>
+</div>
+<div class="p-4 bg-surface-container-low border-l-4 border-primary">
+<p class="font-label-caps text-[10px] mb-1">VOLUNTEERS</p>
+<p class="font-headline-sm text-primary">120</p>
+<p class="text-xs">From 14 countries</p>
+</div>
+</div>
+<button class="mt-10 bg-primary text-on-primary px-8 py-3 font-label-caps hover:opacity-90 transition-all duration-300">JOIN THE TEAM</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact/Newsletter CTA -->
+<section class="max-w-7xl mx-auto px-container-mobile md:px-container-desktop mb-section-gap-desktop">
+<div class="bg-tertiary-fixed text-on-tertiary-fixed p-12 md:p-24 text-center rounded-lg">
+<h2 class="font-headline-md text-headline-md mb-6">Stay Rooted</h2>
+<p class="font-body-lg mb-12 max-w-xl mx-auto opacity-80">Subscribe to our seasonal dispatch for news on upcoming programs, Erasmus+ calls, and stories from the garden.</p>
+<form class="flex flex-col md:flex-row gap-4 max-w-lg mx-auto">
+<input class="flex-grow bg-transparent border-b border-on-tertiary-fixed placeholder:text-on-tertiary-fixed/50 py-3 px-1 focus:ring-0 focus:border-secondary outline-none font-label-caps text-sm" placeholder="YOUR EMAIL ADDRESS" type="email"/>
+<button class="bg-primary text-on-primary px-8 py-3 font-label-caps hover:bg-on-tertiary-fixed transition-colors" type="submit">SUBSCRIBE</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap-mobile md:py-section-gap-desktop px-container-mobile md:px-container-desktop flex flex-col md:flex-row justify-between gap-gutter bg-surface-container-low border-t border-outline-variant/50">
+<div class="flex flex-col gap-6 max-w-md">
+<h2 class="font-headline-sm text-headline-sm text-primary">Calme Garden</h2>
+<p class="font-body-md text-on-surface-variant">An organic refuge for learning, growing, and connecting. Located in the heart of the Peloponnese, Greece.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-80" data-icon="facebook">social_leaderboard</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-80" data-icon="instagram">retweet</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-12">
+<div class="flex flex-col gap-4">
+<h4 class="font-label-caps text-secondary">EXPLORE</h4>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-all" href="#">About Us</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-all" href="#">Programs</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-all" href="#">Products</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-all" href="#">Volunteer</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-caps text-secondary">LEGAL</h4>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-all" href="#">Privacy Policy</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-all" href="#">Terms of Service</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-all" href="#">Sustainability Report</a>
+</div>
+</div>
+<div class="md:text-right flex flex-col justify-between">
+<p class="font-body-md text-on-surface-variant">© 2024 Calme Garden. All rights reserved.</p>
+</div>
+</footer>
+</body></html>

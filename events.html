@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="light" lang="el"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Source+Sans+3:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary": "#974723",
+                    "on-secondary-fixed": "#370e00",
+                    "on-primary-fixed-variant": "#324c3e",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#496455",
+                    "surface-container-low": "#f5f3ee",
+                    "on-primary-container": "#98b5a3",
+                    "secondary-fixed-dim": "#ffb598",
+                    "on-primary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "inverse-on-surface": "#f2f1ec",
+                    "tertiary-container": "#3a4627",
+                    "outline": "#727973",
+                    "tertiary-fixed-dim": "#becca3",
+                    "on-secondary-fixed-variant": "#79300e",
+                    "on-primary-fixed": "#062014",
+                    "surface-variant": "#e4e2dd",
+                    "inverse-primary": "#b0cdbb",
+                    "on-tertiary-fixed-variant": "#3f4b2c",
+                    "outline-variant": "#c2c8c2",
+                    "secondary-fixed": "#ffdbce",
+                    "on-secondary": "#ffffff",
+                    "on-surface-variant": "#424844",
+                    "primary": "#173124",
+                    "surface-container-highest": "#e4e2dd",
+                    "surface-dim": "#dbdad5",
+                    "error-container": "#ffdad6",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#dae8be",
+                    "on-secondary-container": "#772f0c",
+                    "background": "#fbf9f4",
+                    "primary-container": "#2d4739",
+                    "on-tertiary-fixed": "#141f05",
+                    "surface": "#fbf9f4",
+                    "error": "#ba1a1a",
+                    "inverse-surface": "#30312e",
+                    "tertiary": "#242f13",
+                    "surface-container": "#f0eee9",
+                    "surface-bright": "#fbf9f4",
+                    "on-tertiary-container": "#a6b48d",
+                    "secondary-container": "#ff996e",
+                    "surface-container-high": "#eae8e3",
+                    "on-background": "#1b1c19",
+                    "on-surface": "#1b1c19",
+                    "primary-fixed-dim": "#b0cdbb",
+                    "primary-fixed": "#ccead6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "section-gap-mobile": "48px",
+                    "container-padding-desktop": "80px",
+                    "gutter": "16px",
+                    "unit": "4px",
+                    "section-gap-desktop": "96px",
+                    "container-padding-mobile": "24px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Libre Caslon Text"],
+                    "display-lg": ["Libre Caslon Text"],
+                    "headline-sm": ["Libre Caslon Text"],
+                    "body-lg": ["Source Sans 3"],
+                    "label-caps": ["Source Sans 3"],
+                    "display-lg-mobile": ["Libre Caslon Text"],
+                    "body-md": ["Source Sans 3"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fbf9f4;
+            color: #1b1c19;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-body-md">
+<!-- TopAppBar Navigation -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-sm dark:bg-surface-dim/90 border-b border-outline-variant/30">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-container-mobile md:px-container-desktop h-20">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer" data-icon="menu">menu</span>
+<h1 class="font-headline-md text-headline-md text-primary">Calme Garden</h1>
+</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Home</a>
+<a class="font-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">About</a>
+<a class="font-label-caps text-secondary border-b-2 border-secondary pb-1" href="#">Events</a>
+<a class="font-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Contact</a>
+</nav>
+<div class="font-headline-sm text-headline-sm text-primary cursor-pointer hover:opacity-80 transition-opacity">
+                ΕΛ | EN
+            </div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[707px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center bg-no-repeat transition-transform duration-700 hover:scale-105" data-alt="A lush Mediterranean garden at dusk with golden hour lighting softly illuminating olive trees and wild lavender. Elegant wooden tables are set for an outdoor dinner under a canopy of warm fairy lights. The atmosphere is serene and organic, featuring a natural palette of earthy greens, soft sands, and terracotta tones, reflecting an editorial luxury aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA__XZWJvJH1wVtaBA_Jlrq4A1VGDx5bIjyzi3Q6XE6naSUXEXKANhv3fSmcUKUC5ym6UVaV0JnHGJ3btAXbO7EYSwoiKmeDflF7aWChE3KailWH6yLEtZwRj4IGedkjPCWDI_Idga3T5WRA4PqqYTH00VmSW1x6WkuyYhtiSrwY9zdRa6KCrkoetyH2vb62nwQqQwkh9M-CkHxFE-c249hJc9WX7oDJ2B0gOOAC2upj-YlgFdghIrJGmhmt3lJTgzDe0xDawapGjs')">
+</div>
+<div class="absolute inset-0 bg-primary/20"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-container-mobile md:px-container-desktop w-full text-white">
+<div class="max-w-2xl">
+<span class="font-label-caps text-secondary-fixed bg-primary/40 px-3 py-1 rounded-sm mb-6 inline-block uppercase tracking-widest">Collaborate</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-4">Οργανώστε μαζί μας<br/><span class="italic">Co-create at Calme Garden</span></h2>
+<p class="font-body-lg text-body-lg opacity-90 mb-8 max-w-lg">
+                        Έχουμε τον χώρο, φέρνετε την ιδέα. <br/>
+                        We have the space, you bring the idea.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-white px-8 py-4 font-label-caps rounded-sm hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
+                            GET IN TOUCH <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Intro Text -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface">
+<div class="max-w-4xl mx-auto px-container-mobile md:px-container-desktop text-center">
+<h3 class="font-headline-md text-headline-md text-primary mb-8">A Sanctuary for Every Occasion</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    From intimate workshops and rustic retreats to vibrant bazaars and celebratory dinners, Calme Garden offers a versatile canvas tailored to your vision. Our spaces are designed to foster connection, creativity, and a deep sense of Mediterranean hospitality.
+                </p>
+</div>
+</section>
+<!-- Bento Grid Spaces -->
+<section class="pb-section-gap-mobile md:pb-section-gap-desktop px-container-mobile md:px-container-desktop max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Herbal Garden -->
+<div class="md:col-span-8 group overflow-hidden">
+<div class="relative h-[400px] rounded-lg overflow-hidden mb-4">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="An expansive herbal garden in the Greek countryside with rows of rosemary, sage, and thyme under a clear blue sky. The lighting is bright and natural, highlighting the textures of stone paths and terracotta pots. The visual style is crisp and editorial, focusing on the organic beauty of the landscape and earthy color tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZ5zdDlU4jHyshCpshZHSmKPFSQ_Pu0aENcBxj5_1PImBQMtjz0kyn1lan7Ik7tTN9z1AOHySR97zjhN8JJxGVbtZu75GlOcI-KvV1_LlTO4YMKo_LAp6FBMMXZ4efYQ5rDopabhb2uj10G0AmI4cvgIsg0OQi96lsegSw8IoAosfIfkhfWQI02cn4ZAwHmz2StjGPzMKVx8bkppf5nL3_jang59UjGuRhL37h7KaQ6qJBZyJw8MaWFpUgRQygJ7vQLPmC4shOqiM"/>
+<div class="absolute bottom-6 left-6 text-white">
+<span class="font-label-caps bg-secondary px-3 py-1 rounded-sm">OUTDOOR</span>
+</div>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">Herbal Garden | Βοτανικός Κήπος</h4>
+<p class="font-body-md text-on-surface-variant">An aromatic haven perfect for morning yoga, acoustic sessions, or botanical workshops surrounded by native Greek flora.</p>
+</div>
+<!-- Main Building -->
+<div class="md:col-span-4 group overflow-hidden">
+<div class="relative h-[400px] rounded-lg overflow-hidden mb-4">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A minimalist Mediterranean architectural interior with whitewashed walls and polished concrete floors. Large windows allow soft natural light to flood the room, showcasing simple wooden furniture and artisanal pottery. The mood is calm and grounded, adhering to a light-mode aesthetic with sand and olive accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-mpOeNwVCntfN80_tXqjDZLyGu3ZXO4ZLUmGr-ynHdy3ztJ2s6sb60YYKoqNUtt5GENCEPHPwpL_8oLJoKGmAueZ0hHQ-f9pjeZ5UPZPKz1-dysRiv1QQQFpobnzmQZCMfl619B8ZObBJUxCbBTb__aV-KtMEohnwmgZnWASyVo9Tc1rSWjus9IREW1eB75WQf3mx2EAiGunOE_29SIRilm2MNqj3YrMqvjBJrW3I2DLIUgTeNmqdDeK1-PPZQPNrB-hM7znYY8Y"/>
+<div class="absolute bottom-6 left-6 text-white">
+<span class="font-label-caps bg-primary px-3 py-1 rounded-sm">INDOOR</span>
+</div>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">Main Building | Κεντρικό Κτίριο</h4>
+<p class="font-body-md text-on-surface-variant">A minimalist, light-filled space ideal for corporate seminars, exhibitions, or formal gatherings.</p>
+</div>
+<!-- Horses Yard -->
+<div class="md:col-span-4 group overflow-hidden">
+<div class="relative h-[400px] rounded-lg overflow-hidden mb-4">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A rustic paddock area with a beautiful white horse standing near a low stone wall. The setting is surrounded by olive groves during the late afternoon, with long shadows and warm, hazy lighting. The style is tactile and natural, emphasizing the connection between the animals and the Mediterranean environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_DgmLVmBP6rAM5YlnSgh8WWqRSCpZlM5piFT8kPwRVImVBv9rnmOZdgOByldgLpwOnAPJUSnIxg6oE_7_SA6jQxzPlTwlzLEgWk9wbLy_H1UxJcfNmpctTSt6fp40_nZkNnOhiSUO3R6TzclA1ZaCT56cDBmoLA5_L-x37UyeHPhRrvAErxTBETVoHvyXYLTBJLdjHh3IpqKerI5WjkuYdog7U1zL4O7_rrogluTXfRMEGQ6OLJae7UzPkLZUHHBA_w46UqV-Jf0"/>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">Horses Yard | Αυλή με τα Άλογα</h4>
+<p class="font-body-md text-on-surface-variant">Unique, spirited location for rustic festivals, markets, and photography sessions with our resident companions.</p>
+</div>
+<!-- Amphitheater -->
+<div class="md:col-span-8 group overflow-hidden">
+<div class="relative h-[400px] rounded-lg overflow-hidden mb-4">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A small, modern stone amphitheater built into a hillside, overlooking a valley at sunset. The sky is painted in soft oranges and purples, and the stone seats are warm to the touch. The visual aesthetic is editorial and architectural, blending ancient Greek inspiration with contemporary minimalist design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwUXBkRPsACsnYEM6CCpCAquJuRLwAfRoVQ9tN_fNIHlCyyPz6A3WX-2EvmziJ-MuTNnv9e5-6GUtuWrSDd6nKcx0EqvAuFxe2d72vABkzrTx0A376xYaBNxs0Fvz3g4Q9Ef9Kd3WbuDD04Pq1lqUJfvaTSFCQyf5IYfndAF6XLAB7KcxeHUPsorZ2Eoi089P1iGf6pvjQ-oyiwrz7Va5iVXAgZiTH4Txt8fJa9weuWiia2nRkhN5RRrmqtJmlvRm_pYY09KysqIc"/>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">Amphitheater | Αμφιθέατρο</h4>
+<p class="font-body-md text-on-surface-variant">A dramatic, open-air stone theater designed for performances, talks, and sunset ceremonies overlooking the horizon.</p>
+</div>
+</div>
+</section>
+<!-- Events List Section -->
+<section class="bg-surface-container-low py-section-gap-mobile md:py-section-gap-desktop">
+<div class="max-w-7xl mx-auto px-container-mobile md:px-container-desktop">
+<div class="mb-12">
+<h3 class="font-headline-md text-headline-md text-primary">Infinite Possibilities</h3>
+<div class="w-24 h-1 bg-secondary mt-4"></div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="space-y-2">
+<h5 class="font-label-caps text-secondary">SOCIAL</h5>
+<ul class="font-body-md space-y-1 text-on-surface">
+<li>Birthdays | Γενέθλια</li>
+<li>Private Dinners | Δείπνα</li>
+<li>Weddings | Γάμοι</li>
+</ul>
+</div>
+<div class="space-y-2">
+<h5 class="font-label-caps text-secondary">CULTURE</h5>
+<ul class="font-body-md space-y-1 text-on-surface">
+<li>Bazaars | Παζάρια</li>
+<li>Festivals | Φεστιβάλ</li>
+<li>Exhibitions | Εκθέσεις</li>
+</ul>
+</div>
+<div class="space-y-2">
+<h5 class="font-label-caps text-secondary">GROWTH</h5>
+<ul class="font-body-md space-y-1 text-on-surface">
+<li>Workshops | Εργαστήρια</li>
+<li>Retreats | Retreats</li>
+<li>Seminars | Σεμινάρια</li>
+</ul>
+</div>
+<div class="space-y-2">
+<h5 class="font-label-caps text-secondary">WELLNESS</h5>
+<ul class="font-body-md space-y-1 text-on-surface">
+<li>Yoga Sessions</li>
+<li>Meditation | Διαλογισμός</li>
+<li>Healing | Θεραπεία</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop">
+<div class="max-w-5xl mx-auto px-container-mobile md:px-container-desktop bg-primary text-white p-12 md:p-24 rounded-lg relative overflow-hidden text-center">
+<div class="relative z-10">
+<h2 class="font-headline-md text-headline-md mb-6">Ready to bring your idea to life?</h2>
+<p class="font-body-lg mb-10 max-w-xl mx-auto opacity-80 italic">
+                        "Ο κάθε χώρος μας έχει τη δική του ενέργεια. Είμαστε εδώ για να τον προσαρμόσουμε στις δικές σας ανάγκες."
+                    </p>
+<div class="flex flex-col md:flex-row justify-center items-center gap-6">
+<button class="bg-secondary text-white px-10 py-4 font-label-caps rounded-sm hover:opacity-90 transition-opacity">
+                            CONTACT US FOR ARRANGEMENTS
+                        </button>
+<a class="font-label-caps border-b border-white pb-1 hover:opacity-70 transition-opacity" href="#">VIEW GALLERY</a>
+</div>
+</div>
+<!-- Abstract Design Elements -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary-container rounded-full -translate-y-1/2 translate-x-1/2 opacity-20"></div>
+<div class="absolute bottom-0 left-0 w-48 h-48 bg-secondary rounded-full translate-y-1/2 -translate-x-1/2 opacity-10"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap-mobile md:py-section-gap-desktop px-container-mobile md:px-container-desktop flex flex-col md:flex-row justify-between gap-gutter bg-surface-container-low border-t border-outline-variant/50">
+<div class="max-w-sm">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-4">Calme Garden</h4>
+<p class="font-body-md text-on-surface-variant mb-6">A curated Mediterranean destination where nature meets heritage. Join us in the heart of Greece for moments that matter.</p>
+</div>
+<div class="flex flex-col gap-6">
+<div class="flex gap-8">
+<a class="font-body-md text-on-surface-variant hover:text-primary hover:underline decoration-secondary transition-all" href="#">Privacy Policy</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary hover:underline decoration-secondary transition-all" href="#">Terms of Service</a>
+</div>
+<div class="flex gap-8">
+<a class="font-body-md text-on-surface-variant hover:text-primary hover:underline decoration-secondary transition-all" href="#">Volunteer</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary hover:underline decoration-secondary transition-all" href="#">Sustainability Report</a>
+</div>
+<p class="font-body-md text-on-surface dark:text-on-surface-variant mt-4 opacity-60">© 2024 Calme Garden. All rights reserved.</p>
+</div>
+</footer>
+</body></html>
